@@ -2,6 +2,33 @@
 
 This script generates a visual representation of the directory structure of a specified root directory. It supports exporting the structure to a Markdown file and offers various options to customize the output.
 
+### Example Output
+
+```
+├── .env
+├── .gitignore
+├── README.md
+├── config/
+│   ├── env.go
+├── data/
+│   ├── found-url.json
+│   ├── url.txt
+├── db/
+│   ├── db.go
+├── directory_structure.md
+├── go.mod
+├── go.sum
+├── main.go
+├── rss/
+│   ├── fetch.go
+├── telegram/
+│   ├── telegram.go
+├── utils/
+    ├── http.go
+    ├── utils.go
+```
+
+
 ## Features
 
 - **Visual Directory Tree**: Display the directory structure in a tree-like format.
