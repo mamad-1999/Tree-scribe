@@ -92,11 +92,11 @@ def main():
     parser = argparse.ArgumentParser(
         description="Generate and optionally export a directory tree structure.")
     parser.add_argument("directory", help="Path to the root directory")
-    parser.add_argument("--export-md", action="store_true",
+    parser.add_argument("-md", "--export-md", action="store_true",
                         help="Export the directory structure to a Markdown file")
-    parser.add_argument("--depth", type=int,
+    parser.add_argument("-d", "--depth", type=int,
                         help="Limit the depth of directory traversal")
-    parser.add_argument("--verbose", action="store_true",
+    parser.add_argument("-v", "--verbose", action="store_true",
                         help="Enable verbose logging")
     parser.add_argument("-c", "--color", action="store_true",
                         help="Enable colorful output")
@@ -119,7 +119,7 @@ def main():
     # Initialize colorama if -c or --color is used
     if color:
         global colorama_enabled
-        from colorama import Fore, Style, init
+        from colorama import Fore, init
         init(autoreset=True)
         colorama_enabled = True
 
