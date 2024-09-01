@@ -22,13 +22,13 @@ This script generates a visual representation of the directory structure of a sp
 
 ## Command-Line Switches
 
-| Switch/Option      | Description                                                     | Example Usage                              |
-| ------------------ | --------------------------------------------------------------- | ------------------------------------------ |
-| `<directory-path>` | Path to the root directory whose structure you want to display. | `python main.py /home/project`             |
-| `--export-md`      | Export the directory structure to a Markdown file.              | `python main.py /home/project --export-md` |
-| `--depth <number>` | Limit the depth of directory traversal.                         | `python main.py /home/project --depth 2`   |
-| `--verbose`        | Enable verbose logging for detailed output.                     | `python main.py /home/project --verbose`   |
-| `-c`, `--color`    | Enable colorful output in the terminal.                         | `python main.py /home/project -c`          |
+| Switch/Option            | Description                                                     | Example Usage                       |
+| ------------------------ | --------------------------------------------------------------- | ----------------------------------- |
+| `<directory-path>`       | Path to the root directory whose structure you want to display. | `python main.py /home/project`      |
+| `-md`, `--export-md`     | Export the directory structure to a Markdown file.              | `python main.py /home/project -md`  |
+| `-d`, `--depth <number>` | Limit the depth of directory traversal.                         | `python main.py /home/project -d 2` |
+| `-v`, `--verbose`        | Enable verbose logging for detailed output.                     | `python main.py /home/project -v`   |
+| `-c`, `--color`          | Enable colorful output in the terminal.                         | `python main.py /home/project -c`   |
 
 ## Examples
 
