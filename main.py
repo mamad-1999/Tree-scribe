@@ -27,7 +27,7 @@ def get_colorama_color():
         return '', ''
 
 
-def print_directory_tree(root_dir, indent="", depth=None, current_depth=0):
+def print_directory_tree(root_dir, indent="", depth=None, current_depth=0, color_mode=False):
     if depth is not None and current_depth > depth:
         return "", 0
 
@@ -52,7 +52,7 @@ def print_directory_tree(root_dir, indent="", depth=None, current_depth=0):
         logging.error(f"Error reading directory {root_dir}: {e}")
         return "", 0
 
-    dir_color, file_color = get_colorama_color()
+    dir_color, file_color = get_colorama_color() if color_mode else ('', '')
     tree_structure = ""
     file_count = 0
     for index, item in enumerate(items):
@@ -63,14 +63,14 @@ def print_directory_tree(root_dir, indent="", depth=None, current_depth=0):
             if os.path.islink(path):
                 logging.debug(f"Skipping symlink directory: {path}")
                 continue
-            tree_structure += f"{indent}├── {dir_color}{item}/\n"
+            tree_structure += f"{indent}├── {dir_color}{item}/\n" if color_mode else f"{indent}├── {item}/\n"
             new_indent = indent + "│   " if not is_last else indent + "    "
             subdir_structure, subdir_file_count = print_directory_tree(
-                path, new_indent, depth, current_depth + 1)
+                path, new_indent, depth, current_depth + 1, color_mode)
             tree_structure += subdir_structure
             file_count += subdir_file_count
         else:
-            tree_structure += f"{indent}├── {file_color}{item}\n"
+            tree_structure += f"{indent}├── {file_color}{item}\n" if color_mode else f"{indent}├── {item}\n"
             file_count += 1
     return tree_structure, file_count
 
@@ -116,15 +116,11 @@ def main():
             "The provided path is not a valid directory. Please try again.")
         sys.exit(1)
 
-    # Initialize colorama if -c or --color is used
-    if color:
-        global colorama_enabled
-        from colorama import Fore, init
-        init(autoreset=True)
-        colorama_enabled = True
-
     logging.info(f"Starting directory scan for: {root_dir}")
-    tree_structure, file_count = print_directory_tree(root_dir, depth=depth)
+    # Disable color mode if exporting to Markdown
+    color_mode = color if not export_md else False
+    tree_structure, file_count = print_directory_tree(
+        root_dir, depth=depth, color_mode=color_mode)
     print(Fore.YELLOW + root_dir if color else root_dir)
     print(tree_structure)
     print(f"\n├──────── [{file_count} files]")
