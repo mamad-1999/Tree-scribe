@@ -116,3 +116,9 @@ This script is provided under the MIT License. See the LICENSE file for more inf
 ### Contributing
 
 Feel free to submit issues, suggestions, or pull requests. Contributions are welcome!
+
+##### Summary of Additions
+- **Customizing Filters**: Instructions for modifying the `filters.py` file to include or exclude specific directories from the output.
+- **Adding/Removing Folders**: Clear steps on how to update the `EXCLUDED_DIRECTORIES` list.
+
+
