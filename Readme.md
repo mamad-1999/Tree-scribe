@@ -4,7 +4,6 @@
   <a href="#usage"><img src="https://img.shields.io/badge/Usage-green?style=for-the-badge" alt="Usage"></a>
   <a href="#commands"><img src="https://img.shields.io/badge/Commands-red?style=for-the-badge" alt="Commands"></a>
   <a href="#output"><img src="https://img.shields.io/badge/Output-orange?style=for-the-badge" alt="Output"></a>
-  <a href="#examples"><img src="https://img.shields.io/badge/Examples-purple?style=for-the-badge" alt="Examples"></a>
   <a href="#troubleshooting"><img src="https://img.shields.io/badge/Troubleshooting-aqua?style=for-the-badge" alt="Troubleshooting"></a>
   <a href="#contributing"><img src="https://img.shields.io/badge/Contributing-yellow?style=for-the-badge" alt="Contributing"></a>
 </p>
@@ -55,7 +54,7 @@
 | `-d`, `--depth <number>` | Limit the depth of directory traversal.                         | `python main.py /home/project -d 2` |
 | `-c`, `--color`          | Enable colorful output in the terminal.                         | `python main.py /home/project -c`   |
 
-### Examples
+### Usage
 
 1. **Display the Directory Structure**
 
