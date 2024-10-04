@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8-blue"></a>
+  <a href="https://github.com/mamad-1999/Tree-scribe/issues"><img src="https://img.shields.io/github/issues/mamad-1999/Tree-scribe"></a>
+  <a href="https://github.com/mamad-1999/Tree-scribe/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mamad-1999/Tree-scribe"></a>
+</p>
 <h4 align="center">This script generates a visual representation of the directory structure of a specified root directory. It supports exporting the structure to a Markdown file and offers various options to customize the output.</h4>
 <p align="center">
   <a href="#installation"><img src="https://img.shields.io/badge/Install-blue?style=for-the-badge" alt="Install"></a>
