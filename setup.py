@@ -7,7 +7,7 @@ setup(
     description="Generate and export directory tree structures with optional color output.",
     author="mamad1999",
     author_email="www.mmhmdmm83@gmail.com",
-    url="https://github.com/mamad-1999/tree-scribe",  # Your GitHub URL
+    url="https://github.com/blackechox/tree-scribe",  # Your GitHub URL
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     packages=find_packages(),            # Automatically find all packages
